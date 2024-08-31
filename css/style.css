@@ -83,7 +83,7 @@ body {
 .slider img {
   height: 70vh;
   border-radius: 30px;
-  width: 80dvw;
+  width: 99dvw;
   object-fit: cover;
   border-radius: 30px;
   display: none;
@@ -97,9 +97,11 @@ body {
 }
 .slider button{
     position: absolute;
+    width: 2rem;
+    height: 2rem;
     top: 50%;
     transform: translate(-50%,);
-    padding: 0.6rem;
+    border-radius: 50%;
     border: none;
     outline: none;
     background: var(--Main-Color2);
@@ -108,7 +110,7 @@ body {
     margin: 0px 0.3rem;
 }
 .previous{
-    left: 0;
+    left:0;
 }
 .next{
     right:0;
