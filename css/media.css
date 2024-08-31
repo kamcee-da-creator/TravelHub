@@ -1,0 +1,21 @@
+@media  screen and (min-width:1351px) {
+    .slides{
+        display: flex;
+        gap:10px;
+        padding: 2rem 0;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+     
+    }
+    .slider img {
+      height: 80vh;
+      width: 80dvw;
+      border-radius: 30px;
+      object-fit: cover;
+      border-radius: 30px;
+      display: none;
+      transition: display 1s ease-in;
+      
+    }
+}

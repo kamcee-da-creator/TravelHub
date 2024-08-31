@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Remix icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/media.css" />
+    <title>Tickets.com</title>
+  </head>
+  <body>
+    <!-- This is the navigation bar -->
+    <header class="nav">
+      <div class="nav-item">
+        <div class="icon"><i class="ri-search-line"></i></div>
+        <h6>Search</h6>
+      </div>
+      <div class="nav-item">
+        <div class="icon"><i class="ri-heart-fill"></i></div>
+        <h6>Favourites</h6>
+      </div>
+      <div class="nav-item">
+        <div class="icon"><i class="ri-coupon-3-fill"></i></div>
+        <h6>Bookings</h6>
+      </div>
+      <div class="nav-item">
+        <div class="icon"><i class="ri-user-3-fill"></i></div>
+        <h6>Profile</h6>
+      </div>
+    </header>
+
+    <!-- This is the heading -->
+    <section class="logo">
+      <img src="./img/travelhub-high-resolution-logo-transparent.png" alt="" />
+    </section>
+
+    <!-- this is the slider -->
+    <div class="slider">
+      <div class="slides">
+        <img
+          class="img"
+          src="https://cdn.pixabay.com/photo/2021/02/02/14/34/hamburg-5974223_1280.jpg"
+          alt="Czech Republic"
+        />
+        <img
+          class="img"
+          src="https://cdn.pixabay.com/photo/2017/12/16/16/37/great-wall-of-china-3022907_1280.jpg"
+          alt="china"
+        />
+        <img
+          class="img"
+          src="https://cdn.pixabay.com/photo/2019/02/21/18/36/city-4011922_1280.jpg"
+          alt=""
+        />
+        <img
+          class="img"
+          src="https://cdn.pixabay.com/photo/2019/11/14/01/13/amsterdam-4625104_1280.jpg"
+          alt=""
+        />
+        <img
+          class="img"
+          src="https://cdn.pixabay.com/photo/2018/01/09/12/20/hamburg-3071437_1280.jpg"
+          alt=""
+        />
+      </div>
+      <button class="prev" onclick="prevSlide()">
+        <i class="ri-arrow-left-line"></i>
+      </button>
+      <button class="next" onclick="nextSlide()">
+        <i class="ri-arrow-right-line"></i>
+      </button>
+    </div>
+    <!-- Locations selector -->
+    <section class="locations">
+      <div class="location-item">
+        <i class="ri-map-pin-line"></i>
+        <input type="text" placeholder="Your Current Location" />
+      </div>
+      <div class="location-item">
+        <i class="ri-flight-land-line"></i>
+        <input type="text" placeholder="Your Destination" />
+      </div>
+
+
+
+
+      <!-- location flex part -->
+      <div class="location-flex">
+        <div class="location-item">
+            <i class="ri-calendar-schedule-line"></i>
+          <input type="date"  />
+        </div>
+        <div class="location-item">
+            <i class="ri-calendar-schedule-line"></i>
+          <input type="number" placeholder="1" value="1" id="flightNumber" />
+        </div>
+      
+            <!-- location flex part ends-->
+      </div>
+ <!-- location flex part -->
+      <div class="location-item select">
+        <i class="ri-calendar-schedule-line"></i>
+        
+        <select id="cars" name="cars">
+          <option value="OneWay">One Way</option>
+          <option value="TwoWay">Two Way</option>
+       
+        </select>
+        
+    </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>

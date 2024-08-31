@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  font-family: var(--Montserrat);
+  padding-bottom: 10rem;
+  overflow-x: hidden;
+}
+:root {
+  --Main-Color: rgb(129, 0, 189);
+  --Main-Color2: rgb(89, 0, 130);
+  --Background-white: rgb(236, 236, 236);
+  --Nav-white: rgb(255, 255, 255);
+  --input: rgb(246, 246, 246);
+  --Text-black: black;
+  --Montserrat: "Montserrat";
+}
+/* logo */
+.logo{
+    padding: 1rem 0 0 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100dvw;
+
+}
+.logo img{
+    height: 30px;
+}
+/* logo ends */
+/* bottom Nav  */
+.nav {
+  background-color: var(--Nav-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 50px;
+  position: fixed;
+  width: 100dvw;
+  bottom: 0;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.159);
+  padding: 2.5rem 0;
+  z-index: 8;
+}
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--Main-Color);
+}
+.icon {
+  font-size: 2rem;
+  color: var(--Main-Color2);
+  font-family: var(--Montserrat);
+}
+/* bottom Nav ends */
+
+/* slider begins */
+.slider {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  padding: 2rem auto;
+
+
+}
+.slides{
+    display: flex;
+    gap:10px;
+    padding: 2rem 0;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.slider img {
+  height: 70vh;
+  border-radius: 30px;
+  width: 80dvw;
+  object-fit: cover;
+  border-radius: 30px;
+  display: none;
+  transition: display 1s ease-in;
+  
+}
+.img.displaySlide{
+    display: block;
+    animation-name: fade;
+    animation-duration: 1s;
+}
+.slider button{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,);
+    padding: 0.6rem;
+    border: none;
+    outline: none;
+    background: var(--Main-Color2);
+    color: white;
+    font-size: 1rem;
+    margin: 0px 0.3rem;
+}
+.previous{
+    left: 0;
+}
+.next{
+    right:0;
+}
+@keyframes fade{
+0%{
+    opacity:.5;
+
+}
+100%{
+    opacity:1;
+}
+}
+/* slider begins ends */
+.locations{
+    /* background: red; */
+    padding: 1rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* height: 30vh; */
+}
+.locations i{
+    color: var(--Main-Color2);
+}
+.location-item{
+    background:var(--input) ;
+    width: 90%;
+    padding: 0 0.5rem;
+    margin: 0.2rem 0;
+    border-radius: 20px;
+}
+.location-item input[type="text"]{
+    padding: 0.4rem 0.5rem;
+    width: 90%;
+    margin: 0.2rem 0;
+    border: none;
+    background: var(--input);
+    color: var(--Main-Color2);
+    font-family: var(--Montserrat);
+    font-weight: 650;
+}.location-item input[type="text"]:focus{
+border: none;
+outline: none;
+
+}
+.location-flex{
+display: flex;
+gap: 10px;
+}
+.location-flex .location-item{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+width:42dvw !important;
+}
+.location-flex .location-item{
+     border-radius: 3px;
+     width: 90%;
+     
+}
+.location-flex .location-item input{
+    padding: 0.4rem 0.5rem;
+    width: 100%;
+    margin: 0.2rem 0;
+    border: none;
+    background: var(--input);
+    color: var(--Main-Color2);
+    font-family: var(--Montserrat);
+    font-weight: 650;
+}.location-item input:focus{
+border: none;
+outline: none;
+}
