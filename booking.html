@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Remix icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <link rel="shortcut icon" href="img/travelhub-favicon-color.png" type="image/x-icon" />
+    <title>TravelHub.com | created By TagTechnologiesNg</title>
 </head>
 <body>
+    <section class="logo">
+        <img src="./img/travelhub-high-resolution-logo-transparent.png" alt="TravelHub Logo" />
+    </section>
+    <!-- Navigation bar -->
+    <header class="nav">
+        <div class="nav-item">
+            <div class="icon"><i class="ri-search-line"></i></div>
+            <h6>Search</h6>
+        </div>
+        <div class="nav-item">
+            <div class="icon"><i class="ri-heart-fill"></i></div>
+            <h6>Favourites</h6>
+        </div>
+        <div class="nav-item">
+            <div class="icon"><i class="ri-coupon-3-fill"></i></div>
+            <h6>Bookings</h6>
+        </div>
+        <div class="nav-item">
+            <div class="icon"><i class="ri-user-3-fill"></i></div>
+            <h6>Profile</h6>
+        </div>
+    </header>
+
+    <!-- Navigation Bar Ends-->
+     <!-- locations bar -->
+     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+     <dotlottie-player src="https://lottie.host/fc91ab35-5155-4c3a-963f-558f29072018/VFGhZL7N4O.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+     <h1>Your Booking Details</h1>
+
+     <div>
+         <p><strong>Current Location:</strong> <span id="currentLocation"></span></p>
+         <p><strong>Destination:</strong> <span id="destination"></span></p>
+         <p><strong>Travel Date:</strong> <span id="travelDate"></span></p>
+         <p><strong>Passenger Count:</strong> <span id="passengerCount"></span></p>
+         <p><strong>Ticket Type:</strong> <span id="ticketType"></span></p>
+     </div>
+ 
+         <!-- locations bar ends-->
+
     
+    <script src="bookings.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>

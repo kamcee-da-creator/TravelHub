@@ -1,124 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
     <!-- Remix icon -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/media.css" />
-    <link
-      rel="shortcut icon"
-      href="img/travelhub-favicon-color.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="img/travelhub-favicon-color.png" type="image/x-icon" />
     <title>TravelHub.com | created By TagTechnologiesNg</title>
-  </head>
-  <body>
-    <!-- This is the navigation bar -->
+</head>
+<body>
+    <!-- Navigation bar -->
     <header class="nav">
-      <div class="nav-item">
-        <div class="icon"><i class="ri-search-line"></i></div>
-        <h6>Search</h6>
-      </div>
-      <div class="nav-item">
-        <div class="icon"><i class="ri-heart-fill"></i></div>
-        <h6>Favourites</h6>
-      </div>
-      <div class="nav-item">
-        <div class="icon"><i class="ri-coupon-3-fill"></i></div>
-        <h6>Bookings</h6>
-      </div>
-      <div class="nav-item">
-        <div class="icon"><i class="ri-user-3-fill"></i></div>
-        <h6>Profile</h6>
-      </div>
+        <div class="nav-item">
+            <div class="icon"><i class="ri-search-line"></i></div>
+            <h6>Search</h6>
+        </div>
+        <div class="nav-item">
+            <div class="icon"><i class="ri-heart-fill"></i></div>
+            <h6>Favourites</h6>
+        </div>
+        <div class="nav-item">
+            <div class="icon"><i class="ri-coupon-3-fill"></i></div>
+            <h6>Bookings</h6>
+        </div>
+        <div class="nav-item">
+            <div class="icon"><i class="ri-user-3-fill"></i></div>
+            <h6>Profile</h6>
+        </div>
     </header>
 
-    <!-- This is the heading -->
+    <!-- Heading -->
     <section class="logo">
-      <img src="./img/travelhub-high-resolution-logo-transparent.png" alt="" />
+        <img src="./img/travelhub-high-resolution-logo-transparent.png" alt="TravelHub Logo" />
     </section>
 
-    <!-- this is the slider -->
+    <!-- Image Slider -->
     <div class="slider">
-      <div class="slides">
-        <img
-          class="img"
-          src="https://cdn.pixabay.com/photo/2021/02/02/14/34/hamburg-5974223_1280.jpg"
-          alt="Czech Republic"
-        />
-        <img
-          class="img"
-          src="https://cdn.pixabay.com/photo/2017/12/16/16/37/great-wall-of-china-3022907_1280.jpg"
-          alt="china"
-        />
-        <img
-          class="img"
-          src="https://cdn.pixabay.com/photo/2019/02/21/18/36/city-4011922_1280.jpg"
-          alt=""
-        />
-        <img
-          class="img"
-          src="https://cdn.pixabay.com/photo/2019/11/14/01/13/amsterdam-4625104_1280.jpg"
-          alt=""
-        />
-        <img
-          class="img"
-          src="https://cdn.pixabay.com/photo/2018/01/09/12/20/hamburg-3071437_1280.jpg"
-          alt=""
-        />
-      </div>
-      <button class="prev" onclick="prevSlide()">
-        <i class="ri-arrow-left-line"></i>
-      </button>
-      <button class="next" onclick="nextSlide()">
-        <i class="ri-arrow-right-line"></i>
-      </button>
+        <div class="slides">
+            <img class="img" src="https://cdn.pixabay.com/photo/2021/02/02/14/34/hamburg-5974223_1280.jpg" alt="Czech Republic" />
+            <img class="img" src="https://cdn.pixabay.com/photo/2017/12/16/16/37/great-wall-of-china-3022907_1280.jpg" alt="China" />
+            <img class="img" src="https://cdn.pixabay.com/photo/2019/02/21/18/36/city-4011922_1280.jpg" alt="City" />
+            <img class="img" src="https://cdn.pixabay.com/photo/2019/11/14/01/13/amsterdam-4625104_1280.jpg" alt="Amsterdam" />
+            <img class="img" src="https://cdn.pixabay.com/photo/2018/01/09/12/20/hamburg-3071437_1280.jpg" alt="Hamburg" />
+        </div>
+        <button class="prev" onclick="prevSlide()"><i class="ri-arrow-left-line"></i></button>
+        <button class="next" onclick="nextSlide()"><i class="ri-arrow-right-line"></i></button>
     </div>
 
-    
-    <!-- Locations selector -->
+    <!-- Location Selector -->
     <section class="locations">
-      <div class="location-item">
-        <i class="ri-map-pin-line"></i>
-        <input type="text" placeholder="Your Current Location" />
-      </div>
-      <div class="location-item">
-        <i class="ri-flight-land-line"></i>
-        <input type="text" placeholder="Your Destination" />
-      </div>
-
-      <!-- location flex part -->
-      <div class="location-flex">
         <div class="location-item">
-          <i class="ri-calendar-schedule-line"></i>
-          <input type="date" />
+            <i class="ri-map-pin-line"></i>
+            <input type="text" id="currentLocation" placeholder="Your Current Location" required />
         </div>
         <div class="location-item">
-          <i class="ri-user-6-line"></i>
-          <input type="number" placeholder="1" value="1" id="flightNumber" />
+            <i class="ri-flight-land-line"></i>
+            <input type="text" id="destination" placeholder="Your Destination" required />
         </div>
 
-        <!-- location flex part ends-->
-      </div>
-      <!-- location flex part -->
-      <div class="location-item select">
-        <i class="ri-calendar-schedule-line"></i>
+        <!-- Location Flex Part -->
+        <div class="location-flex">
+            <div class="location-item">
+                <i class="ri-calendar-schedule-line"></i>
+                <input type="date" id="travelDate" required/>
+            </div>
+            <div class="location-item">
+                <i class="ri-user-6-line"></i>
+                <input type="number" id="passengerCount" placeholder="1" value="1" min="1" max="10" required />
+            </div>
+        </div>
 
-        <select id="ticket" name="ticket">
-          <option value="OneWay">One Way</option>
-          <option value="TwoWay">Two Way</option>
-        </select>
-      </div>
+        <!-- Ticket Type -->
+        <div class="location-item select">
+            <i class="ri-coupon-2-line"></i>
+            <select id="ticketType" name="ticketType" required>
+                <option value="OneWay">One Way Ticket</option>
+                <option value="TwoWay">Two Way Ticket</option>
+            </select>
+        </div>
 
-      <!-- button -->
-       <button class="location-btn" onclick="saveValue()" href="./booking.html">Lets Go!!</button>
+        <!-- Button -->
+        <button class="location-btn" onclick="saveValue()">Let's Go!!</button>
     </section>
+
     <script src="bookings.js"></script>
     <script src="./script.js"></script>
-  </body>
+</body>
 </html>
