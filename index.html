@@ -10,7 +10,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/media.css" />
-    <title>Tickets.com</title>
+    <link
+      rel="shortcut icon"
+      href="img/travelhub-favicon-color.png"
+      type="image/x-icon"
+    />
+    <title>TravelHub.com | created By TagTechnologiesNg</title>
   </head>
   <body>
     <!-- This is the navigation bar -->
@@ -85,34 +90,33 @@
         <input type="text" placeholder="Your Destination" />
       </div>
 
-
-
-
       <!-- location flex part -->
       <div class="location-flex">
         <div class="location-item">
-            <i class="ri-calendar-schedule-line"></i>
-          <input type="date"  />
+          <i class="ri-calendar-schedule-line"></i>
+          <input type="date" />
         </div>
         <div class="location-item">
-            <i class="ri-calendar-schedule-line"></i>
+          <i class="ri-user-6-line"></i>
           <input type="number" placeholder="1" value="1" id="flightNumber" />
         </div>
-      
-            <!-- location flex part ends-->
+
+        <!-- location flex part ends-->
       </div>
- <!-- location flex part -->
+      <!-- location flex part -->
       <div class="location-item select">
         <i class="ri-calendar-schedule-line"></i>
-        
-        <select id="cars" name="cars">
+
+        <select id="ticket" name="ticket">
           <option value="OneWay">One Way</option>
           <option value="TwoWay">Two Way</option>
-       
         </select>
-        
-    </div>
+      </div>
+
+      <!-- button -->
+       <button class="location-btn" onclick="saveValue()" href="./booking.html">Lets Go!!</button>
     </section>
+    <script src="bookings.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>

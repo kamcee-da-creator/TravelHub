@@ -9,10 +9,11 @@
      
     }
     .slider img {
-      height: 80vh;
+      height: 90vh !important;
       width: 80dvw;
       border-radius: 30px;
       object-fit: cover;
+      display: none;
       border-radius: 30px;
       display: none;
       transition: display 1s ease-in;

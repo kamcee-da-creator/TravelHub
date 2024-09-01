@@ -21,16 +21,15 @@ body {
   --Montserrat: "Montserrat";
 }
 /* logo */
-.logo{
-    padding: 1rem 0 0 0 ;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100dvw;
-
+.logo {
+  padding: 1rem 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100dvw;
 }
-.logo img{
-    height: 30px;
+.logo img {
+  height: 30px;
 }
 /* logo ends */
 /* bottom Nav  */
@@ -69,119 +68,168 @@ body {
   margin: auto;
   overflow: hidden;
   padding: 2rem auto;
-
-
 }
-.slides{
-    display: flex;
-    gap:10px;
-    padding: 2rem 0;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+.slides {
+  display: flex;
+  gap: 10px;
+  padding: 2rem 0;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 .slider img {
-  height: 70vh;
+  height: 60vh;
   border-radius: 30px;
-  width: 99dvw;
+  width: 90dvw;
   object-fit: cover;
   border-radius: 30px;
   display: none;
   transition: display 1s ease-in;
-  
 }
-.img.displaySlide{
-    display: block;
-    animation-name: fade;
-    animation-duration: 1s;
+.img.displaySlide {
+  display: block;
+  animation-name: fade;
+  animation-duration: 1s;
 }
-.slider button{
-    position: absolute;
-    width: 2rem;
-    height: 2rem;
-    top: 50%;
-    transform: translate(-50%,);
-    border-radius: 50%;
-    border: none;
-    outline: none;
-    background: var(--Main-Color2);
-    color: white;
-    font-size: 1rem;
-    margin: 0px 0.3rem;
+.slider button {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  top: 50%;
+  transform: translate(-50%);
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  font-size: 1rem;
+  margin: 0px 0.3rem;
 }
-.previous{
-    left:0;
+.previous {
+  left: 0;
 }
-.next{
-    right:0;
+.next {
+  right: 0;
 }
-@keyframes fade{
-0%{
-    opacity:.5;
-
-}
-100%{
-    opacity:1;
-}
+@keyframes fade {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /* slider begins ends */
-.locations{
-    /* background: red; */
-    padding: 1rem 0rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* height: 30vh; */
+.locations {
+  /* background: red; */
+  padding: 1rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 30vh; */
 }
-.locations i{
-    color: var(--Main-Color2);
+.locations i {
+  color: var(--Main-Color2);
 }
-.location-item{
-    background:var(--input) ;
-    width: 90%;
-    padding: 0 0.5rem;
-    margin: 0.2rem 0;
-    border-radius: 20px;
+.location-item {
+  background: var(--input);
+  width: 90%;
+  padding: 0 0.5rem;
+  margin: 0.2rem 0;
+  border-radius: 20px;
 }
-.location-item input[type="text"]{
-    padding: 0.4rem 0.5rem;
-    width: 90%;
-    margin: 0.2rem 0;
-    border: none;
-    background: var(--input);
-    color: var(--Main-Color2);
-    font-family: var(--Montserrat);
-    font-weight: 650;
-}.location-item input[type="text"]:focus{
-border: none;
-outline: none;
+.location-item input[type="text"] {
+  padding: 0.4rem 0.5rem;
+  width: 90%;
+  margin: 0.2rem 0;
+  border: none;
+  background: var(--input);
+  color: var(--Main-Color2);
+  font-family: var(--Montserrat);
+  font-weight: 650;
+}
+.location-item input[type="text"]:focus {
+  border: none;
+  outline: none;
+}
+.location-flex {
+  display: flex;
+  gap: 20px;
+}
+.location-flex .location-item {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  width: 42dvw !important;
+}
+.location-flex .location-item {
+  border-radius: 3px;
+  width: 90%;
+}
+.location-flex .location-item input {
+  padding: 0.4rem 0.5rem;
+  width: 100%;
+  margin: 0.2rem 0;
+  border: none;
+  background: var(--input);
+  color: var(--Main-Color2);
+  font-family: var(--Montserrat);
+  font-weight: 650;
+}
+.location-item input:focus {
+  border: none;
+  outline: none;
+}
 
+select:focus {
+  border: 2px solid var(--Main-Color); /* Border with color */
+
+  outline: none;
 }
-.location-flex{
-display: flex;
-gap: 10px;
+select {
+  padding: 0.4rem 0.5rem;
+  width: 88%;
+  margin: 0.2rem 0;
+  border: none;
+  background: var(--input);
+  color: var(--Main-Color2);
+  font-family: var(--Montserrat);
+  font-weight: 650;
+  margin-left: 7px;
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f8f9fa; /* Background color */
+  font-size: 16px; /* Font size */
+  appearance: none; /* Remove default arrow for styling */
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="black" d="M7 10l5 5 5-5z"/></svg>'); /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* Position the custom arrow */
+  background-size: 30px; /* Size of the arrow */
+  cursor: pointer;
 }
-.location-flex .location-item{
-    display: flex;
-    align-items: center;
-    gap: 2px;
-width:42dvw !important;
-}
-.location-flex .location-item{
-     border-radius: 3px;
-     width: 90%;
-     
-}
-.location-flex .location-item input{
-    padding: 0.4rem 0.5rem;
-    width: 100%;
-    margin: 0.2rem 0;
+select option {
+    padding: 10px;
+    background-color: var(--input);
+    color: #333;
+    font-size: 16px;
+  }
+  section option:hover{
+    background: var(--Main-Color2);
+  }
+
+  /* location btn */
+  .location-btn{
+    margin: 2rem 0;
+    outline: none;
     border: none;
-    background: var(--input);
-    color: var(--Main-Color2);
-    font-family: var(--Montserrat);
-    font-weight: 650;
-}.location-item input:focus{
-border: none;
-outline: none;
-}
+    padding: 1rem ;
+    width: 90%;
+    color: var(--Nav-white);
+    background: var(--Main-Color2);
+    cursor: pointer;
+  }
+  /* location btn ends */
+
+
+  /* location ends */
