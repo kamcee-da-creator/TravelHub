@@ -1,3 +1,5 @@
+@import url(./booking.css);
+
 @media  screen and (min-width:1351px) {
     .slides{
         display: flex;
