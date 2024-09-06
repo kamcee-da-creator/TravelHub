@@ -1,24 +1,45 @@
 @import url(./booking.css);
 
-@media  screen and (min-width:1351px) {
-    .slides{
-        display: flex;
-        gap:10px;
-        padding: 2rem 0;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-     
-    }
-    .slider img {
-      height: 90vh !important;
-      width: 80dvw;
-      border-radius: 30px;
-      object-fit: cover;
-      display: none;
-      border-radius: 30px;
-      display: none;
-      transition: display 1s ease-in;
-      
-    }
+@media screen and (min-width: 1351px) {
+  .slides {
+    display: flex;
+    gap: 10px;
+    padding: 2rem 0;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .slider img {
+    height: 90vh !important;
+    width: 80dvw;
+    border-radius: 30px;
+    object-fit: cover;
+    display: none;
+    border-radius: 30px;
+    display: none;
+    transition: display 1s ease-in;
+  }
+  .qr-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+  }
+}
+@import url(./booking.css);
+
+@media screen and (min-width: 801px) {
+  .qr-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+  }
+}
+@media screen and (max-width: 451px) {
+  .location-checkout h1 {
+    font-size: 1.3rem;
+  }
 }

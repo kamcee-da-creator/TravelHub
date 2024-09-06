@@ -42,3 +42,8 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('ticketTypes').textContent = localStorage.getItem('ticketType');
      
 });
+
+function homePage() {
+    window.location.href = "./index.html";
+
+}

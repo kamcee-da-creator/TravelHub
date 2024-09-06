@@ -66,3 +66,7 @@ function nextSlide() {
     // Show the slide at the updated slideIndex
     showSlide(slideIndex);
 }
+
+function loginPage(){
+    window.location.href = "./login.html";
+}

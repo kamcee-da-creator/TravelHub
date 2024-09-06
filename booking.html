@@ -9,6 +9,22 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <!-- qr code generator -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+      integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- qr code generator -->
+    <!-- unique id -->
+    <!-- Include a UUID library if you're generating unique IDs -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
+      integrity="sha256-63IaI95LkEDfIg9CSgBxL0Z8LBAJttIDr5PcOwzd4AI="
+      crossorigin="anonymous"
+    ></script>
+    <!-- unique id ends -->
     <link rel="stylesheet" href="./css/media.css" />
     <link
       rel="shortcut icon"
@@ -26,10 +42,10 @@
     </section>
     <!-- Navigation bar -->
     <header class="nav">
-      <div class="nav-item">
+      <div class="nav-item" onclick="homePage()">
         <div class="icon"><i class="ri-home-fill"></i></div>
         <h6>Home</h6>
-    </div>
+      </div>
       <div class="nav-item">
         <div class="icon"><i class="ri-search-line"></i></div>
         <h6>Search</h6>
@@ -38,8 +54,8 @@
         <div class="icon"><i class="ri-heart-fill"></i></div>
         <h6>Favourites</h6>
       </div>
-    
-      <div class="nav-item">
+
+      <div class="nav-item " onclick="loginPage()">
         <div class="icon"><i class="ri-user-3-fill"></i></div>
         <h6>Profile</h6>
       </div>
@@ -63,21 +79,56 @@
       ></dotlottie-player>
       <h1>Your Booking Details</h1>
 
-      <div class="locations-flex">
-        <p>
-          <strong>Current Location:</strong> <span id="currentLocation"></span>
-        </p>
-        <p><strong>Destination:</strong> <span id="destination"></span></p>
-        <p><strong>Travel Date:</strong> <span id="travelDate"></span></p>
-        <p>
-          <strong>Passenger Count:</strong> <span id="passengerCount"></span>
-        </p>
-        <p><strong>Ticket Type:</strong> <span id="ticketTypes"></span></p>
+      <div class="qr-flex">
+        <div class="locations-flex" id="url">
+          <p>
+            <strong>Current Location:</strong>
+            <span id="currentLocation"></span>
+          </p>
+          <p><strong>Destination:</strong> <span id="destination"></span></p>
+          <p><strong>Travel Date:</strong> <span id="travelDate"></span></p>
+          <p>
+            <strong>Passenger Count:</strong> <span id="passengerCount"></span>
+          </p>
+          <p><strong>Ticket Type:</strong> <span id="ticketTypes"></span></p>
+
+          <button class="btn" id="btn" onclick="generateQrcode()">
+            Generate Ticket
+          </button>
+        </div>
+        <div class="qrcode">
+          <!-- qrcode generator -->
+
+          <!-- spinners  -->
+          <script
+            src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+            type="module"
+          ></script>
+
+          <dotlottie-player
+            src="https://lottie.host/ebc5368a-8a99-4726-b39a-b9dd736f9dbc/sVREmts9Tj.json"
+            background="transparent"
+            speed="1"
+            style="width: 300px; height: 300px"
+            loop
+            autoplay
+            id="spinner"
+          ></dotlottie-player>
+          <!-- spinners ends  -->
+
+          <!-- qr code output -->
+          <div class="qr-code" id="qrcode"></div>
+          <!-- qr code output -->
+
+          <!-- qrcode generator ends -->
+        </div>
       </div>
     </div>
     <!-- locations bar ends-->
 
-    <script src="bookings.js"></script>
-    <script src="./script.js"></script>
+    <!-- <script src="qrcode.js"></script> -->
+    <script src="./js/function.js"></script>
+    <script src="./js/bookings.js"></script>
+    <script src="./js/script.js "></script>
   </body>
 </html>

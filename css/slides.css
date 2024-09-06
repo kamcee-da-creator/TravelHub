@@ -1,0 +1,24 @@
+.slideshow-container{
+    display: flex;
+    gap: 3px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+
+}
+.fade {
+    animation: slide 10s linear infinite ;
+    transition: transform 10s linear infinite;  
+}
+
+
+.slideshow-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit browsers */
+}
+@keyframes slide{
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
