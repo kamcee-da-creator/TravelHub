@@ -5,7 +5,16 @@ const usernameElem = document.getElementById('username');
 const logoutBtn = document.getElementById('logout-btn');
 
 const clientId = '816654399321-lc1m3suo4bfdn9b2odpsm1gn3u5ubqf6.apps.googleusercontent.com'; // Replace with your Google OAuth Client ID
-const redirectUri = 'http://localhost:5500/login.html'; // The URL Google redirects to after login
+
+// Determine redirect URI based on the hostname
+const hostname = window.location.hostname;
+let redirectUri;
+
+if (hostname === "localhost" || hostname === "127.0.0.1") {
+    redirectUri = 'http://127.0.0.1:5500/login.html'; // Local development redirect URI
+} else if (hostname === "travelhubng.netlify.app") {
+    redirectUri = 'https://travelhubng.netlify.app/login.html'; // Production redirect URI
+}
 
 // Step 1: Login with Google OAuth2
 function handleLogin() {
@@ -53,7 +62,7 @@ function renderProfileScreen(user) {
 
 // Handle logout
 function handleLogout() {
-    window.location.href = 'http://127.0.0.1:5500/login.html';
+    window.location.href = redirectUri; // Use dynamic redirectUri for logout as well
 }
 
 // Event listeners
