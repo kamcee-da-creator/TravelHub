@@ -73,7 +73,8 @@ const userImgElem = document.getElementById('user-img'); // Get the image elemen
 const logoutBtn = document.getElementById('logout-btn');
 
 const clientId = '816654399321-lc1m3suo4bfdn9b2odpsm1gn3u5ubqf6.apps.googleusercontent.com'; // Replace with your Google OAuth Client ID
-const redirectUri = 'http://localhost:5500/login.html'; // The URL Google redirects to after login
+// const redirectUri = 'http://localhost:5500/login.html'; // The URL Google redirects to after login
+const redirectUri = 'https://travelhubng.netlify.app/login.html'; // The URL Google redirects to after login
 
 // Step 1: Login with Google OAuth2
 function handleLogin() {
