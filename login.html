@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/login.css" />
     <title>Google OAuth2 Login</title>
-  </head>
-  <body>
+</head>
+<body>
     <div id="login-screen">
-      <button id="login-btn">SignIn With Google</button>
+        <button id="login-btn">Sign In With Google</button>
     </div>
     <div id="profile-screen" class="hidden">
-      <p>Welcome <span id="username"></span></p>
-      <button id="logout-btn">Log Out</button>
+        <img id="user-img" src="" alt="User profile image" style="width: 100px; height: 100px; border-radius: 50%;">
+        <p>Welcome <span id="username"></span></p>
+        <button id="logout-btn">Log Out</button>
     </div>
     <script type="module" src="./loginmain.js"></script>
-  </body>
+</body>
 </html>
