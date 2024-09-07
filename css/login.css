@@ -1,57 +1,294 @@
 @import url(./style.css);
-
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Arial", sans-serif;
 }
+:root {
+    --Main-Color: rgb(129, 0, 189);
+    --Main-Color2: rgb(89, 0, 130);
+    --Background-white: rgb(236, 236, 236);
+    --Nav-white: rgb(255, 255, 255);
+    --input: rgb(246, 246, 246);
+    --Text-black: black;
+    --Montserrat: "Montserrat";
+  }
 body {
-  position: relative;
-  font-family: var(--Montserrat);
-  padding-bottom: 10rem;
-  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#gone{
+    display: none;
+}
+.hidden {
+    display: none !important;
+  }
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--Main-Color);
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3700b3;
+}
+
+/* Profile screen styling */
+.profile-screen,
+.settings-screen {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-:root {
-  --Main-Color: rgb(129, 0, 189);
-  --Main-Color2: rgb(89, 0, 130);
-  --Background-white: rgb(236, 236, 236);
-  --Nav-white: rgb(255, 255, 255);
-  --input: rgb(246, 246, 246);
-  --Text-black: black;
-  --Montserrat: "Montserrat";
+
+.profile-img,
+#user-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
-#login-btn {
-  padding: 1rem;
-  border: none;
-  color: white;
-  background: var(--Main-Color2);
-  cursor: pointer;
+
+.user-info h1,
+#username {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
 }
-.hidden {
-  display: none;
+
+.user-info p {
+  color: #666;
+  font-size: 16px;
 }
-#login-screen {
-  width: 300px;
-  height: 200px;
-  background: rgb(248, 248, 248);
-  position: absolute;
-  top: 50%;
-  transform: translateY(50%);
-  /* display: flex; */
+
+/* Settings UI specific styles */
+#settings-container .setting {
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  box-shadow: 10px 20px 10px 2px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
+  font-size: 16px;
+  color: #333;
 }
-#login-screen:hover {
- box-shadow: 2px 12px 10px 2px rgba(5, 0, 0, 0.3);
-    cursor: pointer;
+
+#settings-container .setting:last-child {
+  border-bottom: none;
+}
+
+
+
+/* Toggle switch styling */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #6200ea;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+/* Responsive layout adjustments */
+@media (min-width: 600px) {
+  .box {
+    width: 50%;
+    max-width: 600px;
   }
-  #login-screen:hover > #login-btn {
-    background: rgb(121, 0, 134);
- 
-     }
+}
+
+
+/*  */
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+
+.box {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 360px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+#username{
+    text-align: center;
+    font-size: 2rem !important;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#logout-btn{
+    width:90dvw;
+    text-align: center;
+}
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--Main-Color2);
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--Main-Color);
+}
+
+/* Profile screen styling */
+#profile-screen,
+#settings-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-img,
+#user-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.user-info h1,
+#username {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.user-info p {
+  color: #666;
+  font-size: 16px;
+}
+
+/* Settings UI specific styles */
+#settings-container .setting {
+  width: 100dvw;
+  padding: 20px 50px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+}
+
+#settings-container .setting:last-child {
+  border-bottom: none;
+}
+
+.upgrade-btn {
+  background-color: var(--Main-Color2);
+  margin:1rem 0;
+}
+
+/* Toggle switch styling */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--Main-Color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+

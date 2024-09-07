@@ -132,3 +132,13 @@ logoutBtn.addEventListener('click', handleLogout);
 
 // Check if access token exists on page load
 checkForAccessToken();
+
+document.getElementById('logout-btn').addEventListener('click', function() {
+    // Hide the profile screen and show the settings screen
+    document.getElementById('settings-container').classList.add('hidden');
+    document.getElementById('profile-screen').classList.add('hidden');
+    document.getElementById('settings-screen').classList.remove('hidden');
+ 
+});
+
+// Additional JavaScript to manage settings toggling would go here

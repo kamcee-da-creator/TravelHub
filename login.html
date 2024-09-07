@@ -1,20 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/login.css" />
     <title>TravelHubNg.com</title>
-</head>
-<body>
-    <div id="login-screen">
+  </head>
+  <body>
+<div class="login-flex">
+    <!-- <div id="login-screen" class="box hidden"></div>
         <button id="login-btn">Sign In With Google</button>
-    </div>
-    <div id="profile-screen" class="hidden">
-        <img id="user-img" src="" alt="User profile image" style="width: 100px; height: 100px; border-radius: 50%;">
-        <p>Welcome <span id="username"></span></p>
-        <button id="logout-btn">Log Out</button>
-    </div>
+      </div> -->
+      <!-- <div id="profile-screen" class="hidden">
+        <img
+          id="user-img"
+          src=""
+          alt=""
+          style="width: 100px; height: 100px; border-radius: 50%"
+        />
+        <p>Welcome Back <span id="username"></span></p> -->
+      </div>
+  
+      <!-- New Settings UI -->
+    <div id="settings-screen" class="hidden">
+        <div id="profile-screen" class="profile-screen">
+            <img
+              id="user-img"
+              src=""
+              alt=""
+              style="width: 200px; height: 200px; border-radius: 50%"
+            />
+            <!-- <p>Welcome Back <span id="username"></span></p> -->
+          </div>
+          <div class="user-info">
+            <h1 id="profile-name"> <span id="username"></span></h1>
+          </div>
+          <button class="upgrade-btn">Upgrade Now - Go Pro</button>
+        </div>
+  
+        <div id="settings-container" class="settings-screen">
+          <div class="setting">
+            <p>Dark Mode</p>
+            <label class="switch">
+              <input type="checkbox" id="dark-mode-toggle" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <div class="setting">Notifications</div>
+          <div class="setting">Privacy</div>
+          <div class="setting">Security</div>
+          <div class="setting">Account</div>
+          <div class="setting">Help</div>
+          <div class="setting">About</div>
+          <div class="setting center"><button id="logout-btn">Log Out</button></div>
+          <div id="login-screen" class="box hidden">
+            <button id="login-btn">Sign In With Google</button>
+          </div>
+        </div>
+      </div>
+</div>
+
     <script type="module" src="./loginmain.js"></script>
-</body>
+  </body>
 </html>
