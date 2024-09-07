@@ -4,8 +4,8 @@ const profileScreen = document.getElementById('profile-screen');
 const usernameElem = document.getElementById('username');
 const logoutBtn = document.getElementById('logout-btn');
 
-const clientId = '816654399321-mhjlfp0kpiqmec440kbdv34hn08k1bkl.apps.googleusercontent.com'; // Replace with your Google OAuth Client ID
-const redirectUri = 'http://127.0.0.1:5500/login.html'; // The URL Google redirects to after login
+const clientId = '816654399321-lc1m3suo4bfdn9b2odpsm1gn3u5ubqf6.apps.googleusercontent.com'; // Replace with your Google OAuth Client ID
+const redirectUri = 'http://localhost:5500/login.html'; // The URL Google redirects to after login
 
 // Step 1: Login with Google OAuth2
 function handleLogin() {
