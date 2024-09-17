@@ -18,7 +18,7 @@ function initializeSlider() {
         showSlide(slideIndex);
 
         // Set up the automatic slide change every 3 seconds (3000 milliseconds)
-        intervalId = setInterval(nextSlide, 3000);
+        intervalId = setInterval(nextSlide, 6000);
     }
 }
 

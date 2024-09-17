@@ -233,3 +233,49 @@ select option {
 
 
   /* location ends */
+  /* About */
+  
+  .section-bg, .about{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .section-bg h2, .about h2{
+    color: var(--Main-Color);
+    margin: 2rem 0;
+  }
+  .section-bg p{
+    font-size: 0.7rem;
+    padding: 1rem;
+    margin: 2rem 0;
+    font-weight: 500;
+    color: var(--Main-Color2);
+  }
+  .img-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .img-flex img{
+    height: 33px;
+  }
+  .more-info-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    margin: 2rem 0;
+  }
+.more-info-grid .item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  /* background: red; */
+}
+.item img{
+height: 500px;
+}
+
+  /* About ends*/

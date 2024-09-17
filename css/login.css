@@ -7,14 +7,14 @@
   font-family: "Arial", sans-serif;
 }
 :root {
-    --Main-Color: rgb(129, 0, 189);
-    --Main-Color2: rgb(89, 0, 130);
-    --Background-white: rgb(236, 236, 236);
-    --Nav-white: rgb(255, 255, 255);
-    --input: rgb(246, 246, 246);
-    --Text-black: black;
-    --Montserrat: "Montserrat";
-  }
+  --Main-Color: rgb(129, 0, 189);
+  --Main-Color2: rgb(89, 0, 130);
+  --Background-white: rgb(236, 236, 236);
+  --Nav-white: rgb(255, 255, 255);
+  --input: rgb(246, 246, 246);
+  --Text-black: black;
+  --Montserrat: "Montserrat";
+}
 body {
   display: flex;
   flex-direction: column;
@@ -84,8 +84,6 @@ button:hover {
   border-bottom: none;
 }
 
-
-
 /* Toggle switch styling */
 .switch {
   position: relative;
@@ -140,7 +138,6 @@ input:checked + .slider:before {
   }
 }
 
-
 /*  */
 
 /* Reset and base styles */
@@ -151,32 +148,37 @@ input:checked + .slider:before {
   font-family: "Arial", sans-serif;
 }
 
-
 .box {
   padding: 20px;
-  background: white;
+  background: none;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
   width: 90%;
   max-width: 360px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+  text-align: center;
+  margin: 2rem 0;
+}
+
+#username {
+  text-align: center;
+  font-size: 2rem !important;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+#logout-btn {
+  width: 90dvw;
   text-align: center;
 }
-
-
-#username{
-    text-align: center;
-    font-size: 2rem !important;
+#login-btn {
+  background: none;
 }
-.center{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-#logout-btn{
-    width:90dvw;
-    text-align: center;
+#login-btn img {
+  height: 2.5rem;
 }
 button {
   padding: 10px 20px;
@@ -240,7 +242,7 @@ button:focus {
 
 .upgrade-btn {
   background-color: var(--Main-Color2);
-  margin:1rem 0;
+  margin: 1rem 0;
 }
 
 /* Toggle switch styling */
@@ -288,5 +290,3 @@ input:checked + .slider {
 input:checked + .slider:before {
   transform: translateX(14px);
 }
-
-
